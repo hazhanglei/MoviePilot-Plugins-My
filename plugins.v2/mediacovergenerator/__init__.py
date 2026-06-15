@@ -118,51 +118,42 @@ class MediaCoverGenerator(_PluginBase):
         """获取配置表单"""
         return [
             {
-                "component": "VForm",
-                "content": [
-                    {
-                        "component": "VSwitch",
-                        "props": {
-                            "model": "enabled",
-                            "label": "启用插件",
-                        }
-                    },
-                    {
-                        "component": "VSelect",
-                        "props": {
-                            "model": "cover_style",
-                            "label": "封面风格",
-                            "items": [
-                                {"title": "经典", "value": "classic"},
-                                {"title": "现代", "value": "modern"},
-                                {"title": "极简", "value": "minimal"}
-                            ]
-                        }
-                    },
-                    {
-                        "component": "VTextField",
-                        "props": {
-                            "model": "width",
-                            "label": "封面宽度",
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "component": "VTextField",
-                        "props": {
-                            "model": "height",
-                            "label": "封面高度",
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "component": "VTextField",
-                        "props": {
-                            "model": "output_path",
-                            "label": "输出路径"
-                        }
-                    }
-                ]
+                "type": "switch",
+                "key": "enabled",
+                "label": "启用插件",
+                "value": False
+            },
+            {
+                "type": "select",
+                "key": "cover_style",
+                "label": "封面风格",
+                "options": [
+                    {"label": "经典", "value": "classic"},
+                    {"label": "现代", "value": "modern"},
+                    {"label": "极简", "value": "minimal"}
+                ],
+                "value": "classic"
+            },
+            {
+                "type": "number",
+                "key": "width",
+                "label": "封面宽度",
+                "placeholder": "1280",
+                "value": 1280
+            },
+            {
+                "type": "number",
+                "key": "height",
+                "label": "封面高度",
+                "placeholder": "720",
+                "value": 720
+            },
+            {
+                "type": "text",
+                "key": "output_path",
+                "label": "输出路径",
+                "placeholder": "封面保存目录",
+                "value": ""
             }
         ]
     
