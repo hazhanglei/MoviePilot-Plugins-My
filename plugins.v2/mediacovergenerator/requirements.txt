@@ -1,0 +1,4 @@
+pillow>=9.1.1
+numpy>=1.21.0
+pytz>=2023.3
+pyyaml>=6.0
