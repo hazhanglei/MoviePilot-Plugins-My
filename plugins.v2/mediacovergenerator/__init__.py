@@ -99,8 +99,10 @@ class MediaCoverGenerator(_PluginBase):
                 "key": "cover_style",
                 "label": "封面样式",
                 "options": [
-                    {"label": STYLE_NAMES.get(k, k), "value": k}
-                    for k in STYLE_MAP.keys()
+                    {"label": "单图居中", "value": "static_1"},
+                    {"label": "多图拼接", "value": "static_2"},
+                    {"label": "极简风格", "value": "static_3"},
+                    {"label": "电影胶片", "value": "static_4"}
                 ],
                 "value": "static_1"
             },
